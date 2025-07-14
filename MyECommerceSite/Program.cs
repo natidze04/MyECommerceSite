@@ -79,7 +79,8 @@ async Task SeedRolesAndAdminAsync(IServiceProvider services)
     {
         await roleManager.CreateAsync(new IdentityRole(adminRoleName));
     }
-
+    
+  
     var adminEmail = "admin@myecommerce.com";
     var adminUser = await userManager.FindByEmailAsync(adminEmail);
 

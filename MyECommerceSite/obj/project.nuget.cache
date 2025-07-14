@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "CA2MiD0Gk2s=",
+  "dgSpecHash": "qKSljDOVpk0=",
   "success": true,
-  "projectFilePath": "C:\\Users\\topla\\Desktop\\MyEcommerceSite\\MyECommerceSite\\MyECommerceSite.csproj",
+  "projectFilePath": "C:\\Users\\topla\\Desktop\\MyECommerceSite\\MyECommerceSite\\MyECommerceSite.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\topla\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\topla\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",

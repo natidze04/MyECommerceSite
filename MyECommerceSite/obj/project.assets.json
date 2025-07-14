@@ -8429,11 +8429,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\topla\\Desktop\\MyEcommerceSite\\MyECommerceSite\\MyECommerceSite.csproj",
+      "projectUniqueName": "C:\\Users\\topla\\Desktop\\MyECommerceSite\\MyECommerceSite\\MyECommerceSite.csproj",
       "projectName": "MyECommerceSite",
-      "projectPath": "C:\\Users\\topla\\Desktop\\MyEcommerceSite\\MyECommerceSite\\MyECommerceSite.csproj",
+      "projectPath": "C:\\Users\\topla\\Desktop\\MyECommerceSite\\MyECommerceSite\\MyECommerceSite.csproj",
       "packagesPath": "C:\\Users\\topla\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\topla\\Desktop\\MyEcommerceSite\\MyECommerceSite\\obj\\",
+      "outputPath": "C:\\Users\\topla\\Desktop\\MyECommerceSite\\MyECommerceSite\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
