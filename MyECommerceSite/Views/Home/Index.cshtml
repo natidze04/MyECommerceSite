@@ -1,0 +1,45 @@
+﻿@{
+    ViewData["Title"] = "მთავარი გვერდი";
+}
+
+<!-- მისასალმებელი სექცია (Jumbotron) -->
+<div class="p-5 mb-4 bg-light rounded-3 text-center">
+    <div class="container-fluid py-5">
+        <h1 class="display-5 fw-bold">კეთილი იყოს თქვენი მობრძანება MyECommerceSite-ზე!</h1>
+        <p class="fs-4">
+            აღმოაჩინეთ უნიკალური და მაღალი ხარისხის პროდუქტები, რომლებიც შექმნილია სპეციალურად თქვენთვის.
+            ჩვენ გთავაზობთ საუკეთესო არჩევანს საუკეთესო ფასად.
+        </p>
+        <a asp-controller="Products" asp-action="Index" class="btn btn-primary btn-lg mt-3">
+            პროდუქტების ნახვა
+        </a>
+    </div>
+</div>
+
+<!-- დამატებითი ინფორმაციის ბლოკები -->
+<div class="row text-center">
+    <div class="col-md-4">
+        <div class="card border-0">
+            <div class="card-body">
+                <h2 class="card-title">ხარისხი</h2>
+                <p class="card-text">ჩვენი ყველა პროდუქტი გადის ხარისხის მკაცრ კონტროლს.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card border-0">
+            <div class="card-body">
+                <h2 class="card-title">სწრაფი მიწოდება</h2>
+                <p class="card-text">მიიღეთ თქვენი შეკვეთა უმოკლეს დროში საქართველოს ნებისმიერ წერტილში.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card border-0">
+            <div class="card-body">
+                <h2 class="card-title">მხარდაჭერა</h2>
+                <p class="card-text">ჩვენი გუნდი მზად არის, დაგეხმაროთ ნებისმიერ საკითხში 24/7.</p>
+            </div>
+        </div>
+    </div>
+</div>

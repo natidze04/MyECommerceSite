@@ -1,0 +1,58 @@
+﻿@model MyECommerceSite.Models.ShoppingCart
+
+@{
+    ViewData["Title"] = "ჩემი კალათა";
+}
+
+<h1>ჩემი კალათა</h1>
+
+@if (Model.Items.Any())
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>პროდუქტი</th>
+                <th>ფასი</th>
+                <th>რაოდენობა</th>
+                <th>ჯამი</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Items)
+            {
+                <tr>
+                    <td>@item.Product.Name</td>
+                    <td>@item.Product.Price.ToString("C")</td>
+                    <td>@item.Quantity</td>
+                    <td>@((item.Quantity * item.Product.Price).ToString("C"))</td>
+                    <td>
+                        <form asp-action="RemoveFromCart" asp-controller="ShoppingCart" method="post">
+                            <input type="hidden" name="productId" value="@item.Product.Id" />
+                            <button type="submit" class="btn btn-sm btn-danger">წაშლა</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3" class="text-right"><strong>სულ ჯამი:</strong></td>
+                <td><strong>@Model.GetTotal().ToString("C")</strong></td>
+                <td></td>
+            </tr>
+        </tfoot>
+    </table>
+}
+else
+{
+    <p class="text-center">თქვენი კალათა ცარიელია.</p>
+}
+
+<div class="text-center">
+    <a asp-controller="Products" asp-action="Index" class="btn btn-primary">შოპინგის გაგრძელება</a>
+    @if (Model.Items.Any())
+    {
+        <a href="#" class="btn btn-success">შეკვეთის გაფორმება</a>
+    }
+</div>

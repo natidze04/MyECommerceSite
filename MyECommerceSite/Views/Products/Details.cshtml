@@ -1,0 +1,42 @@
+﻿@* ამ ხედის მოდელი არის არა სია, არამედ ერთი Product ობიექტი *@
+@model MyECommerceSite.Models.Product
+
+@{
+    ViewData["Title"] = Model.Name; // გვერდის სათაური იყოს პროდუქტის სახელი
+}
+
+<h1>@Model.Name</h1>
+
+<div>
+    <h4>პროდუქტის დეტალები</h4>
+    <hr />
+    <div class="row">
+        <div class="col-md-6">
+            <img src="@Model.ImageUrl" alt="@Model.Name" class="img-fluid" />
+        </div>
+        <div class="col-md-6">
+            <dl class="row">
+                <dt class="col-sm-4">
+                    აღწერა:
+                </dt>
+                <dd class="col-sm-8">
+                    @Model.Description
+                </dd>
+                <dt class="col-sm-4">
+                    ფასი:
+                </dt>
+                <dd class="col-sm-8">
+                    <h3>@Model.Price.ToString("C")</h3>
+                </dd>
+            </dl>
+            <form asp-action="AddToCart" asp-controller="ShoppingCart" method="post">
+                <input type="hidden" name="productId" value="@Model.Id" />
+                <input type="hidden" name="quantity" value="1" />
+                <button type="submit" class="btn btn-primary btn-lg mt-3">კალათაში დამატება</button>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="mt-4">
+    <a asp-action="Index" asp-controller="Products" class="btn btn-secondary">უკან სიაში დაბრუნება</a>
+</div>
