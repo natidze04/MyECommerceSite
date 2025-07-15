@@ -53,6 +53,6 @@ else
     <a asp-controller="Products" asp-action="Index" class="btn btn-primary">შოპინგის გაგრძელება</a>
     @if (Model.Items.Any())
     {
-        <a href="#" class="btn btn-success">შეკვეთის გაფორმება</a>
+        <a asp-controller="Order" asp-action="Checkout" class="btn btn-success">შეკვეთის გაფორმება</a>
     }
 </div>

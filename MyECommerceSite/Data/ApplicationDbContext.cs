@@ -15,6 +15,8 @@ namespace MyECommerceSite.Data
         // ეს ხაზი ეუბნება EF Core-ს, რომ ჩვენ გვინდა "Products" სახელის ცხრილი,
         // რომელიც შეესაბამება ჩვენს Product მოდელს.
         public DbSet<Product> Products { get; set; }
+        public DbSet<Order> Orders { get; set; }
+        public DbSet<OrderDetail> OrderDetails { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -26,9 +28,18 @@ namespace MyECommerceSite.Data
             modelBuilder.Entity<Product>()
                 .Property(p => p.Price)
                 .HasColumnType("decimal(18, 2)");
-            // --- კოდის დასასრული ---
+            modelBuilder.Entity<Order>()
+       .Property(o => o.OrderTotal)
+       .HasColumnType("decimal(18, 2)");
 
-            // პროდუქტების საწყისი მონაცემებით შევსება (Seeding)
+
+            modelBuilder.Entity<OrderDetail>()
+                .Property(od => od.Price)
+                .HasColumnType("decimal(18, 2)");
+
+            
+
+            
             modelBuilder.Entity<Product>().HasData(
                 new Product
                 {
